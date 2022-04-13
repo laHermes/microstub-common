@@ -10,7 +10,8 @@
 	"scripts": {
 		"clean": "del-cli ./build/*",
 		"build": "yarn clean && tsc",
-		"pub": "git add . && git commit -m \"Updates\" && git push && npm version patch && yarn build && npm publish"
+		"pre-pub": "git add . && git commit -m \"Updates\" && git push && npm version patch && yarn build",
+		"pub": "npm publish"
 	},
 	"keywords": [],
 	"author": "",
@@ -26,6 +27,7 @@
 		"cookie-session": "^2.0.0",
 		"express": "^4.17.3",
 		"express-validator": "^6.14.0",
-		"jsonwebtoken": "^8.5.1"
+		"jsonwebtoken": "^8.5.1",
+		"node-nats-streaming": "^0.3.2"
 	}
 }
